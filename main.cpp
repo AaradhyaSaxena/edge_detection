@@ -152,44 +152,44 @@ double L(Mat& tile, Point p1, Point p2) {
     return 0.0;
 }
 
-double integrate(Mat& tile, Point p1, Point p2) {
+// double integrate(Mat& tile, Point p1, Point p2) {
 
-    int incr, totalPix;
-    double intensity=0;
+//     int incr, totalPix;
+//     double intensity=0;
 
-    if (p2.y > p1.y) yincr = 1;
-    else yincr = -1;
-    if (p2.x > p1.x) xincr = 1;
-    else xincr = -1;
-    if (abs(p2.y-p1.y) > abs(p2.x-p1.x)) {
-        x = p2.x;
-        yPerx = round(abs(p2.y-p1.y)/abs(p2.x-p1.x));
-        int count = 0;
-        for (int y=p1.y; y!=p2.y; y+=yincr) {
-            intensity += imagePixelValue at (x,y);
-            count++;
-            if (count == yPerx) {
-                x = x+xincr;
-                count = 0;
-            }
-            totalPix++;
-        }
-    }
-    else {
-        y = p2.y;
-        xPery = round(abs(p2.x-p1.x)/abs(p2.y-p1.y));
-        int count = 0;
-        for (int x=p1.x; x!=p2.x; x+=xincr) {
-            intensity += imagePixelValue at (x,y);
-            count++;
-            if (count == xPery) {
-                y = y+yincr;
-                count = 0;
-            }
-            totalPix++;
-        }
-    }
+//     if (p2.y > p1.y) yincr = 1;
+//     else yincr = -1;
+//     if (p2.x > p1.x) xincr = 1;
+//     else xincr = -1;
+//     if (abs(p2.y-p1.y) > abs(p2.x-p1.x)) {
+//         x = p2.x;
+//         yPerx = round(abs(p2.y-p1.y)/abs(p2.x-p1.x));
+//         int count = 0;
+//         for (int y=p1.y; y!=p2.y; y+=yincr) {
+//             intensity += imagePixelValue at (x,y);
+//             count++;
+//             if (count == yPerx) {
+//                 x = x+xincr;
+//                 count = 0;
+//             }
+//             totalPix++;
+//         }
+//     }
+//     else {
+//         y = p2.y;
+//         xPery = round(abs(p2.x-p1.x)/abs(p2.y-p1.y));
+//         int count = 0;
+//         for (int x=p1.x; x!=p2.x; x+=xincr) {
+//             intensity += imagePixelValue at (x,y);
+//             count++;
+//             if (count == xPery) {
+//                 y = y+yincr;
+//                 count = 0;
+//             }
+//             totalPix++;
+//         }
+//     }
 
-    return intensity/totalPix;
-}
+//     return intensity/totalPix;
+// }
 
