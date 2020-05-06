@@ -148,6 +148,10 @@ double meanIntensityStLine(Mat& tile, Point p1, Point p2) {
     return integrate(tile, p1, p2)/L(tile, p1, p2);
 }
 
+double L(Mat& tile, Point p1, Point p2) {
+    return 0.0;
+}
+
 double integrate(Mat& tile, Point p1, Point p2) {
 
     int incr, totalPix;
@@ -189,6 +193,3 @@ double integrate(Mat& tile, Point p1, Point p2) {
     return intensity/totalPix;
 }
 
-double L(Mat& tile, Point p1, Point p2) {
-    return 0.0;
-}
