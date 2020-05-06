@@ -22,7 +22,7 @@ Steps:
 2. For each tile of 5x5, for each pixel pair (p1, p2) on the boundaries of the 5x5 tile (I have written for loops i=0 to 4 and j-0 to 4, which is wrong because that will also include pixels inside), compute response(p1, p2) as follows.
 
     - Compute L(p1, p2) - L is infinity norm, i.e. max of absolutes of the elements of the vector. 
-    In this case, p1 and p2 are 2-dimensional vectors, so it means max(abs(p1.x-p2.x), abs(p1.y,p2.y)). 
+    In this case, p1 and p2 are 2-dimensional vectors, so it means max(abs(p1.x - p2.x), abs(p1.y - p2.y)). 
     Note that we have to incorporate 'trapezoidal rule' here - for now please 
     add a comment to the code saying this has to be done, will be done later.
 
