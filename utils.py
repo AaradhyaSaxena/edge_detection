@@ -15,7 +15,6 @@ def get_tile(img, i, j):
     tile = img[i:i+5, j:j+5]
     return tile
 
-# points at the boundary
 def tile_operations():
     
     b11 = [[0,0],[0,1],[0,2],[0,3]]
