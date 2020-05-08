@@ -152,6 +152,7 @@ double L(Mat& tile, Point p1, Point p2) {
     return 0.0;
 }
 
+//// errors need to update it    
 // double integrate(Mat& tile, Point p1, Point p2) {
 
 //     int incr, totalPix;
