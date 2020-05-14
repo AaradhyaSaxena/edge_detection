@@ -237,6 +237,36 @@ def quadrilateralResp(img, x1,y1,x2,y2, side):
     else:
         return abs(sum1/sum2)
 
+## returns response corresponding to (xi, yi)
+def initialize_beam_curve(img):
+    p1i = []
+    p2i = []
+    ri = []
+    h,w = img.shape
+
+    p1,p2 = tile_operations()
+    i = 0
+    while(i<h-4):
+        j = 0
+        row = []
+        while(j<w-4):
+            p1_temp = list(np.asarray(p1) + [i,j])
+            p2_temp = list(np.asarray(p2) + [i,j])
+            
+            p1i.append(p1_temp)
+            p2i.append(p2_temp)
+            
+            for k in range(len(p1_temp)):
+                x1,y1 = p1_temp[k]
+                x2,y2 = p2_temp[k]
+                row.append(tileResponse(im,x1,y1,x2,y2))
+            j += 5
+            
+        ri.append(row)
+        i += 5
+
+    return p1i, p2i, ri
+
 
 # def bottom_most_level(img,p1i,p2i):
 #     response = []
