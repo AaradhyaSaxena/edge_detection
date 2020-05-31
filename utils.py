@@ -268,27 +268,27 @@ def initialize_beam_curve(img):
     return p1i, p2i, ri
 
 
-# def bottom_most_level(img,p1i,p2i):
-#     response = []
-#     for i in range(len(p1i)):
-#         for j in range(len(p1i[i])):
-#             x1,y1 = p1i[i][j]
-#             x2,y2 = p2i[i][j]
-#             res = tileResponse(img,x1,y1,x2,y2)
-#             response.append(res)
-#     return response
+def bottom_most_level_(img,p1i,p2i):
+    response = []
+    for i in range(len(p1i)):
+        for j in range(len(p1i[i])):
+            x1,y1 = p1i[i][j]
+            x2,y2 = p2i[i][j]
+            res = tileResponse(img,x1,y1,x2,y2)
+            response.append(res)
+    return response
 
-## returns threshold
-# def threshold(x1,y1,x2,y2):
-#     L = computeL(x1,y1,x2,y2)
-#     alpha = 4
-#     complexity = 15
-#     w = 2
-#     sigma = 0.1
-#     beta = complexity*2-1
-#     w = 2*w
-#     T = sigma*np.sqrt(2*(np.log(6*res.N)+0*(beta*L/alpha)*log(2))/(w*L))  
-#     return T
+# returns threshold
+def threshold(x1,y1,x2,y2):
+    L = computeL(x1,y1,x2,y2)
+    alpha = 4
+    complexity = 15
+    w = 2
+    sigma = 0.1
+    beta = complexity*2-1
+    w = 2*w
+    T = sigma*np.sqrt(2*(np.log(6*res.N)+0*(beta*L/alpha)*log(2))/(w*L))  
+    return T
 
 
 
